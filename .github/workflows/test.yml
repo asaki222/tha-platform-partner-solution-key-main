@@ -1,0 +1,21 @@
+name: NestJS CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install modules
+      run: npm install
+
+    - name: Run Unit Tests
+      run: npm run test
+      shell: bash
+
+    - name: Run e2e Tests
+      run: npm run test:e2e
+      shell: bash
