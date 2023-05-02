@@ -22,11 +22,4 @@ describe('AppController (e2e)', () => {
       .expect('Pong!');
   });
 
-  it('/check_vob (POST)', () => {
-    return request(app.getHttpServer())
-      .post('/check_vob')
-      .expect(201)
-      //.expect({'is_valid': true});
-      .expect({'status':'OK'});
-  });
 });

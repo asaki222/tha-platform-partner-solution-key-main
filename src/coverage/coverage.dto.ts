@@ -1,12 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class CreateCoverageDto {
-  
-  @IsNotEmpty()
-  provider_npi: string;
-  
-  @IsNotEmpty()
-  service_type: string;
  
   @IsNotEmpty()
   payer_id: string;
